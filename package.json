@@ -1,0 +1,38 @@
+{
+  "name": "binelek-mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for Binelek Platform",
+  "type": "module",
+  "main": "./build/index.js",
+  "bin": {
+    "binelek-mcp-server": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "dev": "tsx watch src/index.ts",
+    "start": "node build/index.js",
+    "prepare": "npm run build",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "binelek",
+    "knowledge-graph",
+    "ontology"
+  ],
+  "author": "Binelek",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "axios": "^1.6.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
